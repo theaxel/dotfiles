@@ -1,0 +1,8 @@
+#!/bin/sh
+#
+# Find and replace by given file extension recursively in current directory.
+#
+# replace foo bar .html
+# replace foo bar .rb
+
+find . -name "*$3" -exec sed -i '' "s/$1/$2/g" {} \;
